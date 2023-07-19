@@ -8,6 +8,7 @@ CCPFLAGS = -Wall -Wextra -Werror
 
 OBG = megaphone.o
 
+all : $(NAME)
 $(NAME) : $(OBG)
 	$(CCP) $(CCPFLAGS) $(OBG) -o $(NAME)
 
@@ -19,3 +20,5 @@ clean :
 
 fclean : clean
 	rm -rf $(NAME)
+
+re : fclean all
