@@ -32,16 +32,15 @@ void	printThatShit(Phonebook *pb)
 	std::cout << "|-------------------------------------------|\n";
 	for (int i = 0; i < 8; i++)
 	{
-		if (pb->getContact(i, 1)[0])
+		if (pb->getFirstNamePhone(i)[0])
 		{
 			std::cout << "|    " << pb->getIndex(i) << "     ";
-			std::cout << "|" << print(pb.) << "|";
-			std::cout << "" << print(pb->getContact(i, 2)) << "|";
-			std::cout << "" << print(pb->getContact(i, 3)) << "|\n";
+			std::cout << "|" << print(pb->getFirstNamePhone(i)) << "|";
+			std::cout << "" << print(pb->getLastNamePhone(i)) << "|";
+			std::cout << "" << print(pb->getNicknamePhone(i)) << "|\n";
 			std::cout << "|-------------------------------------------|\n";
 		}
 	}
-	
 }
 
 int	chechNumbers(std::string phone)
@@ -103,14 +102,14 @@ void	addContact(Phonebook *pb)
 
 void	displayAll(int i, Phonebook *pb)
 {
-	if ((i >= 0 && i <= 7) && pb->getContact(i)[0])
+	if ((i >= 0 && i <= 7) && pb->getFirstNamePhone(i)[0])
 	{
-		// std::cout << "Index : " << pb->getIndex(i) << std::endl;
-		// std::cout << "First name : " << pb->getContact(i) << std::endl;
-		// std::cout << "Last name : " << pb->getContact(i) << std::endl;
-		// std::cout << "Nickname : " << pb->getContact(i) << std::endl;
-		// std::cout << "Phone Number : " << pb->getContact(i) << std::endl;
-		// std::cout << "Darkest secret : " << pb->getContact(i) << std::endl;
+		std::cout << "Index : " << pb->getIndex(i) << std::endl;
+		std::cout << "First name : " << pb->getFirstNamePhone(i) << std::endl;
+		std::cout << "Last name : " << pb->getLastNamePhone(i) << std::endl;
+		std::cout << "Nickname : " << pb->getNicknamePhone(i) << std::endl;
+		std::cout << "Phone Number : " << pb->getPhoneNumberPhone(i) << std::endl;
+		std::cout << "Darkest secret : " << pb->getDarkSecretPhone(i) << std::endl;
 	}
 	else
 		std::cout << "\033[1m" << "There is no one with this id in this contact" << "\033[0m" << std::endl;

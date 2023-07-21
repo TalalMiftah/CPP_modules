@@ -1,19 +1,25 @@
-NAME = megaphone
+NAME = zombie
 
-SRC = megaphone.cpp
+INCLUDE = Zombie.hpp
+
+SRC =	main.cpp \
+		Zombie.cpp \
+		newZombie.cpp \
+		randomChump.cpp 
+
+OBG = $(SRC:%.cpp=%.o)
 
 CCP = c++
 
 CCPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-OBG = megaphone.o
-
 all : $(NAME)
+
 $(NAME) : $(OBG)
 	$(CCP) $(CCPFLAGS) $(OBG) -o $(NAME)
 
-$(OBG) : $(SRC)
-	$(CCP) $(CCPFLAGS) -c $(SRC)
+%.o : %.cpp $(INCLUDE)
+	$(CCP) $(CCPFLAGS) -c $<
 
 clean :
 	rm -rf $(OBG)

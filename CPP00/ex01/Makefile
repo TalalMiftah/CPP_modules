@@ -4,6 +4,8 @@ SRC = phonebook.cpp
 
 OBG =  $(SRC:%.cpp=%.o)
 
+INCLUDE = phonebook.hpp
+
 CCP = c++
 
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
@@ -13,7 +15,7 @@ all : $(NAME)
 $(NAME) : $(OBG)
 	$(CCP) $(CCPFLAGS) $(OBG) -o $(NAME)
 
-%.o : %.c
+%.o : %.c $(INCLUDE)
 	$(CCP) -c $(CFALGS) $<
 
 clean :

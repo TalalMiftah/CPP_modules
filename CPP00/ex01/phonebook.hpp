@@ -18,13 +18,6 @@
 #include <stdio.h>
 #include <string>
 
-#define str_ std::string
-#define Fname 1
-#define Lname 2
-#define Nname 3
-#define Pnum 4
-#define Dsecret 5
-
 class contact {
 	private:
 		int			index;
@@ -34,12 +27,14 @@ class contact {
 		std::string	phoneNumber;
 		std::string	darkestSecret;
 	public :
+		//setters
 		void	setIndex(int i) {index = i;}
 		void	setFirstName(std::string firstName) {this->firstName = firstName;}
 		void	setLastname(std::string lastName) {this->lastName = lastName;}
 		void	setNickName(std::string nickName) {this->nickName = nickName;}
 		void	setPhone(std::string phoneNumber) {this->phoneNumber = phoneNumber;}
 		void	setDarkSecret(std::string darkestSecret) {this->darkestSecret = darkestSecret;}
+		// getters
 		int			getid() {return index;}
 		std::string	getFirstName() {return firstName;}
 		std::string	getLastName() {return lastName;}
@@ -53,18 +48,18 @@ class Phonebook {
 		contact conta_[8];
 		//setters
 		void	setindex (int index, int i) {conta_[index].setIndex(i);}
-		void	setFirstName (int index, str_ name) {conta_[index].setFirstName(name);}
-		void	setLastName (int index, str_ lname) {conta_[index].setLastname(lname);}
-		void	setNickname (int index, str_ nickname) {conta_[index].setNickName(nickname);}
-		void	setPhoneNumber (int index, str_ phone) {conta_[index].setPhone(phone);}
-		void	setDarkestSecret (int index, str_ Ds) {conta_[index].setDarkSecret(Ds);}
+		void	setFirstName (int index, std::string firstName) {conta_[index].setFirstName(firstName);}
+		void	setLastName (int index, std::string lastName) {conta_[index].setLastname(lastName);}
+		void	setNickname (int index, std::string nickName) {conta_[index].setNickName(nickName);}
+		void	setPhoneNumber (int index, std::string phoneNumber) {conta_[index].setPhone(phoneNumber);}
+		void	setDarkestSecret (int index, std::string darkSecret) {conta_[index].setDarkSecret(darkSecret);}
 		// getters
 		int		getIndex(int index) {return conta_[index].getid();}
-		str_	getFirstNamePhone (int index) {conta_[index].getFirstName();}
-		str_	getLastNamePhone (int index) {conta_[index].getLastName();}
-		str_	getNicknamePhone (int index) {conta_[index].getNickname();}
-		str_	getPhoneNumberPhone (int index) {conta_[index].getPhoneNumber();}
-		str_	getDarkSecretPhone (int index) {conta_[index].getDarkSecret();}
+		std::string	getFirstNamePhone (int index) {return conta_[index].getFirstName();}
+		std::string	getLastNamePhone (int index) {return conta_[index].getLastName();}
+		std::string	getNicknamePhone (int index) {return conta_[index].getNickname();}
+		std::string	getPhoneNumberPhone (int index) {return conta_[index].getPhoneNumber();}
+		std::string	getDarkSecretPhone (int index) {return conta_[index].getDarkSecret();}
 };
 
 #endif
