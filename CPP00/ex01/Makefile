@@ -1,10 +1,10 @@
 NAME = phonebook
 
-SRC = phonebook.cpp
+SRC = PhoneBook.cpp Contact.cpp main.cpp
 
 OBG =  $(SRC:%.cpp=%.o)
 
-INCLUDE = phonebook.hpp
+INCLUDE = PhoneBook.hpp Contact.hpp
 
 CCP = c++
 
