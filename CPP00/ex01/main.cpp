@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 15:55:21 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/08/31 16:36:18 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/09/02 18:02:20 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,9 @@ void	printThatShit(PhoneBook *pb)
 {
 	std::string substring;
 	std::string str;
-	std::cout << "|-------------------------------------------|\n";
-	std::cout << "|    id    |first name|last name | nickname |\n";
-	std::cout << "|-------------------------------------------|\n";
+	std::cout << "|-------------------------------------------|" << std::endl;
+	std::cout << "|    id    |first name|last name | nickname |" << std::endl;
+	std::cout << "|-------------------------------------------|" << std::endl;
 	for (int i = 0; i < 8; i++)
 	{
 		if (pb->getFirstNamePhone(i)[0])
@@ -60,14 +60,18 @@ void	printThatShit(PhoneBook *pb)
 			print(pb->getLastNamePhone(i));
 			std::cout << "|";
 			print(pb->getNicknamePhone(i));
-			std::cout << "|\n";
-			std::cout << "|-------------------------------------------|\n";
+			std::cout << "|" << std::endl;
+			std::cout << "|-------------------------------------------|" << std:: endl;
 		}
 	}
 	std::cout << "index => ";
 	std::getline(std::cin, str);
+	if (str.empty())
+		return ;
 	if (!checkNumbers(str))
 		displayAll(std::stoi(str), pb);
+	else
+		std::cout << "\033[1m" << "invalid id" << "\033[0m" << std::endl;
 }
 
 int	checkNumbers(std::string phone)
@@ -93,7 +97,7 @@ void	addContact(PhoneBook *pb)
 	std::string	dsecret;
 	if (i == 8)
 		i = 0;
-	std::cout << "-------------\n";
+	std::cout << "-------------" << std:: endl;
 	std::cout << "first name : ";
 	if (!std::getline(std::cin, fname))
 		exit (0);
@@ -109,7 +113,7 @@ void	addContact(PhoneBook *pb)
 	std::cout << "Darkest secret : ";
 	if (!std::getline(std::cin, dsecret))
 		exit (0);
-	if (!fname.empty() && !lname.empty() && !nname.empty() && !pnumber.empty() && !dsecret.empty() && !checkNumbers(pnumber))
+	if (!fname.empty() && !lname.empty() && !nname.empty() && !pnumber.empty() && !dsecret.empty())
 	{
 		pb->setIndex(i, i);
 		pb->setFirstName(i, fname);
@@ -139,20 +143,20 @@ void	displayAll(int i, PhoneBook *pb)
 int main ()
 {
 	std::string		str;
-	PhoneBook	pb;
+	PhoneBook		pb;
 
 	while (1)
 	{
-		std::cout << "---------------------------------------------\n";
-		std::cout << "Enter one of this Command ADD | SEARCH | EXIT\n";
-		std::cout << "---------------------------------------------\n";
-		if (!std::getline(std::cin, str))
-			exit(0);
-		if (str == "EXIT" || str.empty())
+		std::cout << "---------------------------------------------" << std::endl;
+		std::cout << "Enter one of this Command ADD | SEARCH | EXIT" << std::endl;
+		std::cout << "---------------------------------------------" << std::endl;
+		if (!std::getline(std::cin, str) || str == "EXIT")
 			exit(0);
 		if (str == "ADD")
 			addContact(&pb);
 		if (str == "SEARCH")
 			printThatShit(&pb);
+		if (str.empty())
+			continue ;
 	}
 }
