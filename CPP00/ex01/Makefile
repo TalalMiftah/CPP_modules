@@ -15,7 +15,7 @@ all : $(NAME)
 $(NAME) : $(OBG)
 	$(CCP) $(CCPFLAGS) $(OBG) -o $(NAME)
 
-%.o : %.c $(INCLUDE)
+%.o : %.cpp $(INCLUDE)
 	$(CCP) -c $(CFALGS) $<
 
 clean :
