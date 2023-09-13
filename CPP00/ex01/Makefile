@@ -16,7 +16,7 @@ $(NAME) : $(OBG)
 	$(CCP) $(CCPFLAGS) $(OBG) -o $(NAME)
 
 %.o : %.cpp $(INCLUDE)
-	$(CCP) -c $(CFALGS) $<
+	$(CCP) -c $(CPPFLAGS) $<
 
 clean :
 	rm -rf $(OBG)

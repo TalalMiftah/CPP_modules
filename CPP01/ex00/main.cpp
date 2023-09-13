@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 08:42:03 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/07/20 08:42:04 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/09/13 11:09:17 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,5 @@ int main ()
     Zombie *z2 = newZombie("Tobi");
     z2->annouce();
     delete z2;
+    randomChump("goCrazy");
 }

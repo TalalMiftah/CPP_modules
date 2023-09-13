@@ -1,10 +1,9 @@
-NAME = zombie
+NAME = Sed
 
-INCLUDE = Zombie.hpp
+INCLUDE = Sed.hpp
 
-SRC = 	main.cpp \
-		Zombie.cpp \
-		zombieHorde.cpp
+SRC = 	Sed.cpp \
+		main.cpp
 
 OBG = $(SRC:%.cpp=%.o)
 

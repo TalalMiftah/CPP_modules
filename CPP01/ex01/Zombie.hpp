@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 10:11:20 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/07/20 10:11:32 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/09/07 15:29:55 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ class Zombie
     public:
         void    annouce(void);
         void    setZombieName(std::string name);
+        Zombie();
+        ~Zombie();
 };
 
 Zombie* zombieHorde( int N, std::string name );

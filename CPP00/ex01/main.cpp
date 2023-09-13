@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 15:55:21 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/09/02 18:02:20 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/09/08 16:02:12 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,6 @@ void			displayAll(int i, PhoneBook *pb);
 
 std::string	print(std::string str)
 {
-	int	i;
-
-	i = str.length();
 	if (str.length() > 10)
 	{
 		str = str.substr(0, 9);
@@ -31,13 +28,8 @@ std::string	print(std::string str)
 	}
 	else
 	{
-		i = 10 - i;
+		std::cout << std::setw(10);
 		std::cout << str;
-		while (i > 0)
-		{
-			std::cout << " ";
-			i--;
-		}
 	}
 	return (str);
 }

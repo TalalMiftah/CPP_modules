@@ -1,10 +1,8 @@
-NAME = zombie
+NAME = harlFilter
+INCLUDE = Harl.hpp
 
-INCLUDE = Zombie.hpp
-
-SRC = 	main.cpp \
-		Zombie.cpp \
-		zombieHorde.cpp
+SRC = 	Harl.cpp \
+		main.cpp
 
 OBG = $(SRC:%.cpp=%.o)
 

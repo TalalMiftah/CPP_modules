@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 10:11:27 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/07/20 11:18:55 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/09/13 11:45:01 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,14 @@ void    Zombie::setZombieName(std::string name){
 
 void    Zombie::annouce(void){
         std::cout << name << ": : BraiiiiiiinnnzzzZ...\n";
+}
+
+Zombie::Zombie(void)
+{
+    return ;
+}
+
+Zombie::~Zombie(void)
+{
+    return ;
 }

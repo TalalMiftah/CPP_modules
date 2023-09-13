@@ -6,16 +6,18 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 18:01:11 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/09/02 17:59:25 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/09/08 16:04:25 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <string>
 
 int main (int ac, char **av)
 {
-	int	i;
-	int	j;
+	int			i;
+	int			j;
+	std::string	str;
 
 	i = 0;
 	j = 1;
@@ -24,15 +26,15 @@ int main (int ac, char **av)
 	while (av[j])
 	{
 		i = 0;
-		while (av[j][i])
+		str = av[j];
+		while (str[i])
 		{
-			if (isalpha(av[j][i]))
-				av[j][i] = toupper(av[j][i]);
-			std::cout << av[j][i];
+			str[i] = std::toupper(str[i]);
 			i++;
 		}
+		std::cout << str;
 		j++;
 	}
-	std::cout << "\n";
+	std::cout << std::endl;
 	return (0);
 }

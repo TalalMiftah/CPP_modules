@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 08:42:24 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/07/20 08:42:25 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/09/13 11:03:46 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ class Zombie
     public:
         void    annouce(void);
         void    setZombie(std::string name);
+        Zombie(void);
+        Zombie(std::string name);
+        ~Zombie(void);
 };
 
 void    randomChump( std::string name );
