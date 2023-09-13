@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:33:32 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/09/13 12:33:33 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/09/13 12:58:52 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,9 @@ void Harl::complain( std::string level ) {
         case 3 :
             (this->*tab[i])();
             i++;
+            break;
         default:
+            std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
             break;
     }
 }

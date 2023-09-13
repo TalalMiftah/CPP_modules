@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:32:13 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/09/13 12:32:14 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/09/13 14:39:53 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 class HumanB
 {
 private:
-    std::string name;
     Weapon      *weapon;
+    std::string name;
 public:
     void    attack();
     void    setWeapon(Weapon& w);
