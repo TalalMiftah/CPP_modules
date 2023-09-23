@@ -1,10 +1,8 @@
-NAME = humans
+NAME = ClapTrap
 
-INCLUDE = HumanB.hpp HumanA.hpp Weapon.hpp
+INCLUDE = ClapTrap.hpp
 
-SRC = 	HumanB.cpp \
-		HumanA.cpp \
-		Weapon.cpp \
+SRC = 	ClapTrap.cpp \
 		main.cpp
 
 OBG = $(SRC:%.cpp=%.o)

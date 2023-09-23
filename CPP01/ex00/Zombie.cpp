@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 08:42:33 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/09/13 11:04:14 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/09/13 18:51:57 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void    Zombie::setZombie(std::string name) {
 
 Zombie::~Zombie(void)
 {
-    std::cout << this->name << " destructor called" << std::endl;
+    std::cout << this->name << ": destructor called" << std::endl;
 }
 
 Zombie::Zombie(void)

@@ -1,10 +1,8 @@
-NAME = humans
+NAME = Fixed
 
-INCLUDE = HumanB.hpp HumanA.hpp Weapon.hpp
+INCLUDE = Fixed.hpp
 
-SRC = 	HumanB.cpp \
-		HumanA.cpp \
-		Weapon.cpp \
+SRC = 	Fixed.cpp \
 		main.cpp
 
 OBG = $(SRC:%.cpp=%.o)

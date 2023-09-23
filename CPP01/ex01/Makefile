@@ -10,7 +10,7 @@ OBG = $(SRC:%.cpp=%.o)
 
 CPP = c++
 
-CPPFLAGS = -Wall -Wextra -Werror
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all : $(NAME)
 

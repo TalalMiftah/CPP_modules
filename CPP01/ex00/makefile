@@ -11,7 +11,7 @@ OBG = $(SRC:%.cpp=%.o)
 
 CCP = c++
 
-CCPFLAGS = -Wall -Wextra -Werror
+CCPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all : $(NAME)
 

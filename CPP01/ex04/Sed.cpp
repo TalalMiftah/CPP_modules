@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sed.cpp                                            :+:      :+:    :+:   */
+/*   Sed.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:31:42 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/09/13 12:31:43 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/09/13 22:47:10 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int	fun(std::string filename, std::string s1, std::string s2)
 {
 	int i;
 	std::string line;
-	std::ifstream inputf(filename);
 	
+	std::ifstream inputf(filename);
 	if (!inputf)
 		return (std::cout << "The file is not exist or we can not read from it." << std::endl , 1);
 	filename += ".replace";
@@ -27,7 +27,7 @@ int	fun(std::string filename, std::string s1, std::string s2)
 	while (getline(inputf, line))
 	{
 		i = 0;
-		while (!s2.empty() &&!s1.empty() && line[i])
+		while (!s2.empty() && !s1.empty() && line[i])
 		{
 			if (!line.compare(i, s1.length(), s1))
 				line = line.substr(0, i) + s2 + line.substr(i + s1.length(), line.length());
@@ -37,5 +37,6 @@ int	fun(std::string filename, std::string s1, std::string s2)
 		if (!inputf.eof())
 			outputf << std::endl;
 	}
+	outputf.close();
 	return (0);
 }
