@@ -17,12 +17,14 @@ class Fixed
         Fixed(const float fixed_point);
         Fixed(const Fixed& f);
         Fixed& operator=(const Fixed& f);
-        Fixed& operator*(const Fixed& f);
-        Fixed& operator-(const Fixed& f);
-        Fixed& operator+(const Fixed& f);
+        Fixed operator*(const Fixed& f);
+        Fixed operator-(const Fixed& f);
+        Fixed operator+(const Fixed& f);
         Fixed& operator++();
         Fixed operator++(int);
-        Fixed& operator/(const Fixed& f);
+        Fixed& operator--();
+        Fixed operator--(int);
+        Fixed operator/(const Fixed& f);
         bool operator>(const Fixed& f) const;
         bool operator<(const Fixed& f) const;
         bool operator<=(const Fixed& f) const;
