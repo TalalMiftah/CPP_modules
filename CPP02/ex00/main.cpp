@@ -1,18 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/26 00:04:43 by tmiftah           #+#    #+#             */
+/*   Updated: 2023/09/26 17:32:18 by tmiftah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Fixed.hpp"
 
-int main( void ) {
-    Fixed a; // deault constructor
-    Fixed b( a ); // in copy constructor we got copy assignement constructor so we will both messages
-    Fixed c; // of course we will see the default contructor message here
+int main( void )
+{
+    Fixed a;
+    Fixed b( a );
+    Fixed c;
     
-    c = b; // copy assignement constructor
-
-    /*
-        in the copy assignement we called the getRawbit member function
-        so in the final output we will see the call of the copy assignement
-        and the gitRawbit() call message
-    */
-
+    c = b;
+    
     std::cout << a.getRawBits() << std::endl;
     std::cout << b.getRawBits() << std::endl;
     std::cout << c.getRawBits() << std::endl;

@@ -1,14 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/26 00:04:28 by tmiftah           #+#    #+#             */
+/*   Updated: 2023/09/27 02:07:17 by tmiftah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Fixed.hpp"
 
 int main( void ) {
-    Fixed a;
-    Fixed const b( 8 );
-    Fixed const c( 42.42f );
-    Fixed const d( b );
+    Fixed b( 8 );
+    Fixed a(b);
+    Fixed c( 42.42f );
+    Fixed d( b );
 
     a = Fixed( 1234.4321f );
-
-    std::cout << "a is " << a << std::endl;
     std::cout << "a is " << a << std::endl;
     std::cout << "b is " << b << std::endl;
     std::cout << "c is " << c << std::endl;

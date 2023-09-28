@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/26 00:04:25 by tmiftah           #+#    #+#             */
+/*   Updated: 2023/09/27 02:28:17 by tmiftah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #ifndef FIXED_H
 #define FIXED_H
@@ -10,7 +22,7 @@ class Fixed
 {
     private:
         int fixed_point;
-        static const int fractional = 8;
+        static const int fractional;
     public:
         Fixed(void);
         Fixed(const int fixed_point);
@@ -24,6 +36,6 @@ class Fixed
         int toInt( void ) const;
 };
 
-std::ostream& operator<<(std::ostream& os,const Fixed& f);
+std::ostream& operator<<(std::ostream& os, const Fixed& f);
 
 #endif

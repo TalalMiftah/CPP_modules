@@ -1,4 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/26 00:04:19 by tmiftah           #+#    #+#             */
+/*   Updated: 2023/09/27 02:28:14 by tmiftah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Fixed.hpp"
+
+const int Fixed::fractional = 8;
 
 Fixed::Fixed(void) {
 	this->fixed_point = 0;
@@ -16,8 +30,7 @@ Fixed::Fixed(const Fixed& f) {
 
 Fixed& Fixed::operator=(const Fixed& f) {
 	std::cout << "copy assignment operator called" << std::endl;
-	if (this != &f)
-		this->fixed_point = f.fixed_point;
+	this->fixed_point = f.fixed_point;
 	return (*this);
 }
 
@@ -27,6 +40,7 @@ int Fixed::getRawBits( void ) const {
 }
 
 void Fixed::setRawBits( int const raw ) {
+	std::cout << "setRawBits member function called" << std::endl;
 	this->fixed_point = raw;
 }
 
@@ -37,10 +51,10 @@ Fixed::Fixed(const int fixed_point) {
 
 Fixed::Fixed(const float fixed_point) {
 	std::cout << "Float constructor called" << std::endl;
-	this->fixed_point = (int)roundf(fixed_point * 256);
+	this->fixed_point = (int)roundf(fixed_point * (1 << this->fractional));
 }
 
-std::ostream& operator<<(std::ostream& os,const Fixed& f) {
+std::ostream& operator<<(std::ostream& os, const Fixed& f) {
 	os << f.toFloat();
 	return (os);
 }
@@ -50,5 +64,5 @@ int Fixed::toInt( void ) const {
 }
 
 float Fixed::toFloat( void ) const {
-	return (this->fixed_point / 256.0f);
+	return (this->fixed_point / (float)(1 << this->fractional));
 }
