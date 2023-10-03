@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/02 21:32:17 by tmiftah           #+#    #+#             */
+/*   Updated: 2023/10/02 21:55:44 by tmiftah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(void) {
@@ -5,7 +17,7 @@ ScavTrap::ScavTrap(void) {
     this->hit_point = 100;
     this->attack_damage = 20;
     this->energy_point = 50;
-    this->name = "Scav";
+    this->name = "ScavTrap";
 }
 
 ScavTrap::ScavTrap(ScavTrap& c)
@@ -16,7 +28,7 @@ ScavTrap::ScavTrap(ScavTrap& c)
 
 ScavTrap::ScavTrap(std::string name)
 {
-	std::cout << "ScavTrap Parameterized constructor called" << std::endl;
+	std::cout << "ScavTrap: Parameterized constructor called" << std::endl;
     this->hit_point = 100;
     this->attack_damage = 20;
     this->energy_point = 50;
@@ -41,14 +53,12 @@ ScavTrap::~ScavTrap(void)
     std::cout << "ScavTrap: Destructor called" << std::endl;
 }
 
-
 void ScavTrap::attack(const std::string& target) {
     if (this->energy_point <= 0 || this->hit_point <= 0)
 		return ;
 	std::cout << "ScavTrap " << this->name << " attacks " << target << ", causing " << this->attack_damage << " points of damage!" << std::endl;
 	this->energy_point--;
 }
-
 
 void ScavTrap::guardGate()
 {

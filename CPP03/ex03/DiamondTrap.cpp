@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/02 21:33:24 by tmiftah           #+#    #+#             */
+/*   Updated: 2023/10/02 21:46:47 by tmiftah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap(void) {
 	std::cout << "DiamondTrap: Default contructor called" << std::endl;
-	this->name = "Diamond";
+	this->name = "DiamondTrap";
 	ClapTrap::name = this->name + "_clap_name";
 	this->hit_point = 100;
 	this->energy_point = 50;
@@ -14,7 +26,7 @@ DiamondTrap::~DiamondTrap(void) {
 }
 
 DiamondTrap::DiamondTrap(std::string name) {
-	std::cout << "Parameterized constructor called" << std::endl;
+	std::cout << "DiamondTrap: Parameterized constructor called" << std::endl;
 	this->name = name;
 	ClapTrap::name = this->name + "_clap_name";
 	this->hit_point = 100;

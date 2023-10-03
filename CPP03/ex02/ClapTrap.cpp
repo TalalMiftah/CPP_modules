@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/02 21:31:26 by tmiftah           #+#    #+#             */
+/*   Updated: 2023/10/02 21:51:54 by tmiftah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(void) {
-	this->name = "Clap";
+	this->name = "ClapTrap";
 	this->hit_point = 10;
 	this->energy_point = 10;
 	this->attack_damage = 0;

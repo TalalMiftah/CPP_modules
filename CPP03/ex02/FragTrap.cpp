@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/02 21:31:39 by tmiftah           #+#    #+#             */
+/*   Updated: 2023/10/02 21:54:48 by tmiftah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap(void) {
@@ -5,7 +17,7 @@ FragTrap::FragTrap(void) {
     this->hit_point = 100;
     this->energy_point = 100;
     this->attack_damage = 30;
-    this->name = "Frag";
+    this->name = "FragTrap";
 }
 
 FragTrap::~FragTrap(void) {
@@ -14,7 +26,7 @@ FragTrap::~FragTrap(void) {
 
 FragTrap::FragTrap(std::string name)
 {
-	std::cout << "FragTrap Parameterized constructor called" << std::endl;
+	std::cout << "FragTrap: Parameterized constructor called" << std::endl;
     this->hit_point = 100;
     this->energy_point = 100;
     this->attack_damage = 30;
@@ -27,7 +39,7 @@ FragTrap::FragTrap(FragTrap &f) {
 }
 
 FragTrap& FragTrap::operator=(const FragTrap& f) {
-    std::cout << "ScavTrap: copy assignment operator called" << std::endl;
+    std::cout << "FragTrap: copy assignment operator called" << std::endl;
 	if (&f != this)
 	{
         this->name = f.name;

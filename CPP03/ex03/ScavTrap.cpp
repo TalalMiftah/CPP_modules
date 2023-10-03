@@ -1,9 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/02 21:48:54 by tmiftah           #+#    #+#             */
+/*   Updated: 2023/10/02 21:50:14 by tmiftah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(void) {
 	this->hit_point = 100;
 	this->attack_damage = 20;
 	this->energy_point = 50;
+	this->name = "ScavTrap";
 	std::cout << "ScavTrap: Default constructor called" << std::endl;
 }
 

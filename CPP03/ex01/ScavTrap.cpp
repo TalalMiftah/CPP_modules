@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/02 21:31:12 by tmiftah           #+#    #+#             */
+/*   Updated: 2023/10/02 21:53:38 by tmiftah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(void) {
@@ -5,7 +17,7 @@ ScavTrap::ScavTrap(void) {
     this->hit_point = 100;
     this->attack_damage = 20;
     this->energy_point = 50;
-    this->name = "Scav";
+    this->name = "ScavTrap";
 }
 
 ScavTrap::ScavTrap(ScavTrap& c)
@@ -16,7 +28,7 @@ ScavTrap::ScavTrap(ScavTrap& c)
 
 ScavTrap::ScavTrap(std::string name)
 {
-	std::cout << "ScavTrap Parameterized constructor called" << std::endl;
+	std::cout << "ScavTrap: Parameterized constructor called" << std::endl;
     this->hit_point = 100;
     this->attack_damage = 20;
     this->energy_point = 50;
