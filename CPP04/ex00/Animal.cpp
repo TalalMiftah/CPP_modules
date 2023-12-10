@@ -7,8 +7,7 @@ Animal::Animal(void) {
 
 Animal::Animal(const Animal& animal) {
     std::cout << "Animal: Copy Constructor" << std::endl;
-    if (this != &animal)
-        *this = animal;
+    *this = animal;
 }
 
 Animal& Animal::operator=(const Animal& animal) {

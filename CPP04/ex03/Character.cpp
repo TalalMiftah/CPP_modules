@@ -50,6 +50,8 @@ void Character::equip(AMateria* m) {
         i++;
     if (i < 4)
         this->slot[i] = m;
+    else
+        delete m;
 }
 
 void Character::unequip(int idx) {
@@ -58,6 +60,6 @@ void Character::unequip(int idx) {
 }
 
 void Character::use(int idx, ICharacter& target) {
-    if (idx >= 0 && idx <= 3)
+    if (idx >= 0 && idx <= 3 && this->slot[idx])
         this->slot[idx]->use(target);
 }

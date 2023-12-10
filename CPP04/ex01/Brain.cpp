@@ -10,10 +10,10 @@ Brain::Brain(const Brain& b) {
 }
 
 Brain& Brain::operator=(const Brain& b) {
-    std::cout << "Brain copy assignement operator called" << std::endl;
+    std::cout << "Brain: copy assignement operator called" << std::endl;
     if (this != &b)
     {
-        for (int i = 0; i < 100; ++i) {
+        for (int i = 0; i < 100; i++) {
             this->ideas[i] = b.ideas[i];
         }
     }

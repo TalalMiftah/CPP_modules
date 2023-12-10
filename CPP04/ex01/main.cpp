@@ -2,14 +2,14 @@
 #include "Dog.hpp"
 #include "Animal.hpp"
 
-void fun()
-{
-	system("leaks Animal");
-}
+// void fun()
+// {
+// 	system("leaks Animal");
+// }
 
 int main()
 {
-	atexit(fun);
+	// atexit(fun);
 	{
         std::cout << "================= First Example ==================" << std::endl;
 		Animal* j = new Dog();
@@ -22,8 +22,8 @@ int main()
 	}
 	{
         std::cout << "================= Second Example ==================" << std::endl;
-		Dog dog;
-		Dog tmp = dog; // sould not crash or gives double free
+		Cat dog;
+		Cat tmp = dog; // sould not crash or gives double free
 	}
 	return 0;
 }
