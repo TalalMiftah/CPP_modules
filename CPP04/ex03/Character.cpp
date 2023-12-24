@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Character.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/10 17:38:31 by tmiftah           #+#    #+#             */
+/*   Updated: 2023/10/10 20:55:58 by tmiftah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Character.hpp"
 
 Character::Character(void) {
@@ -26,7 +38,10 @@ Character& Character::operator=(const Character& c) {
     {
         if (this->slot[i])
             delete slot[i];
-        this->slot[i] = c.slot[i]->clone();
+        if (c.slot[i])
+            this->slot[i] = c.slot[i]->clone();
+        else if (!c.slot[i])
+            this->slot[i] = NULL;
     }
     return (*this);
 }
@@ -50,8 +65,7 @@ void Character::equip(AMateria* m) {
         i++;
     if (i < 4)
         this->slot[i] = m;
-    else
-        delete m;
+
 }
 
 void Character::unequip(int idx) {

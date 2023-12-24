@@ -1,4 +1,4 @@
-NAME = Animal
+NAME = Materia
 
 INCLUDE = Character.hpp MateriaSource.hpp Cure.hpp Ice.hpp ICharacter.hpp IMateriaSource.hpp
 

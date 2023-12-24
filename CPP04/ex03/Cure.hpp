@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/10 17:38:49 by tmiftah           #+#    #+#             */
+/*   Updated: 2023/10/10 18:35:34 by tmiftah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CURE_HPP
 #define CURE_HPP
 
@@ -17,6 +29,9 @@ class Cure : public AMateria
 		Cure& operator=(const Cure& cure);
 		~Cure(void);
 
+		//****************************************//
+		//         Overrided Functions            //
+		//****************************************//
 		std::string const & getType() const;
 		AMateria* clone() const;
 		void use(ICharacter& target);

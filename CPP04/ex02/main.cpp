@@ -1,11 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/10 17:37:34 by tmiftah           #+#    #+#             */
+/*   Updated: 2023/10/10 18:26:55 by tmiftah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "Animal.hpp"
 
 int main()
 {
-    Dog basic;
-
-    Dog tmp = basic;
+    {
+        Dog basic;       
+        Dog tmp = basic;
+    }
     return 0;
 }

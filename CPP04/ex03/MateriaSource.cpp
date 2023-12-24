@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/10 17:39:27 by tmiftah           #+#    #+#             */
+/*   Updated: 2023/10/10 21:00:57 by tmiftah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "MateriaSource.hpp"
 
 void MateriaSource::learnMateria(AMateria* m) {
@@ -6,8 +18,6 @@ void MateriaSource::learnMateria(AMateria* m) {
         i++;
     if (i < 4)
         this->materia[i] = m;
-    else
-        delete m;
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type) {
@@ -45,7 +55,10 @@ MateriaSource& MateriaSource::operator=(MateriaSource& m) {
     {
         if (this->materia[i])
             delete this->materia[i];
-        this->materia[i] = m.materia[i]->clone();
+        if (m.materia[i])
+            this->materia[i] = m.materia[i]->clone();
+        else if (!m.materia[i])
+            this->materia[i] = NULL;
     }
     return (*this);
 }
