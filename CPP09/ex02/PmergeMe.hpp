@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   PmergeMe.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/24 14:29:08 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/12/24 15:41:52 by tmiftah          ###   ########.fr       */
+/*   Created: 2024/01/13 17:40:02 by tmiftah           #+#    #+#             */
+/*   Updated: 2024/01/13 17:40:03 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-#define WHATEVER_HPP
+#ifndef PMERGEME_HPP
+#define PMERGEME_HPP
 
-#include <iostream>
-#include <string>
+# include <vector>
+# include <deque>
+# include <ctime>
+# include <iostream>
+# include <sstream>
+# include <algorithm>
 
-template<typename T>
-void swap(T& a, T& b) {
-    T tmp;
-    tmp = a;
-    a = b;
-    b = tmp;
-}
-
-template<typename T>
-const T& max(const T& va1, const T& va2) {
-    return ((va1 <= va2) ? va2 : va1);
-}
-
-template<typename T>
-const T& min(const T& va1, const T& va2) {
-    return ((va1 >= va2) ? va2 : va1);
-}
+void Pmergeme(std::vector<int> &v);
+void Pmergeme(std::deque<int> &v);
+void parse(char **str, std::vector<int> &v);
+void parse(char **str, std::deque<int> &v);
 
 #endif

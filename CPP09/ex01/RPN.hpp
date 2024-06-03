@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   RPN.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/24 14:29:08 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/12/24 15:41:52 by tmiftah          ###   ########.fr       */
+/*   Created: 2024/01/13 15:58:10 by tmiftah           #+#    #+#             */
+/*   Updated: 2024/01/13 15:58:11 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-#define WHATEVER_HPP
+#ifndef RPN_HPP
+#define RPN_HPP
 
 #include <iostream>
-#include <string>
+#include <stack>
+#include <deque>
+#include <algorithm>
+#include <sstream>
+#include <exception>
 
-template<typename T>
-void swap(T& a, T& b) {
-    T tmp;
-    tmp = a;
-    a = b;
-    b = tmp;
-}
-
-template<typename T>
-const T& max(const T& va1, const T& va2) {
-    return ((va1 <= va2) ? va2 : va1);
-}
-
-template<typename T>
-const T& min(const T& va1, const T& va2) {
-    return ((va1 >= va2) ? va2 : va1);
-}
+void SimpleParse(std::string string, int& j);
+void RPN(std::string& str);
+int IsOperator(char c);
 
 #endif

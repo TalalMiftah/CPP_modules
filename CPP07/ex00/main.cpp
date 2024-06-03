@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 14:29:05 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/12/24 14:29:06 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/12/24 15:42:46 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Awesome
   private:
     int _n;
 };
+
 std::ostream & operator<<(std::ostream & o, const Awesome &a) { o << a.get_n(); return o; }
 
 
@@ -37,7 +38,7 @@ int main(void)
 
         swap(a, b);
         std::cout << a << " " << b << std::endl;
-        std::cout << max(a, b) << std::endl;
-        std::cout << min(a, b) << std::endl;
+        std::cout << "max: " << max(a, b) << std::endl;
+        std::cout << "min: " << min(a, b) << std::endl;
         return (0);
 }

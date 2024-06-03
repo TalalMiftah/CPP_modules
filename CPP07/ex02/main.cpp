@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 14:29:29 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/12/24 14:29:30 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/12/24 18:38:42 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 int main(int, char**)
 {
     Array<int> numbers(MAX_VAL);
+    Array<std::string> number(MAX_VAL);
     int* mirror = new int[MAX_VAL];
     srand(time(NULL));
     for (int i = 0; i < MAX_VAL; i++)

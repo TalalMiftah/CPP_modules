@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/24 14:29:08 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/12/24 15:41:52 by tmiftah          ###   ########.fr       */
+/*   Created: 2023/12/30 08:35:59 by tmiftah           #+#    #+#             */
+/*   Updated: 2023/12/31 15:24:26 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-#define WHATEVER_HPP
+#ifndef EASYFIND_HPP
+#define EASYFIND_HPP
 
 #include <iostream>
-#include <string>
+#include <array>
+#include <vector>
+#include <algorithm>
 
 template<typename T>
-void swap(T& a, T& b) {
-    T tmp;
-    tmp = a;
-    a = b;
-    b = tmp;
-}
-
-template<typename T>
-const T& max(const T& va1, const T& va2) {
-    return ((va1 <= va2) ? va2 : va1);
-}
-
-template<typename T>
-const T& min(const T& va1, const T& va2) {
-    return ((va1 >= va2) ? va2 : va1);
+void easyfind(T &a, int searched_value) {
+    typename T::iterator i = std::find(a.begin(), a.end(), searched_value);
+    if (i != a.end())
+        std::cout << " exist" << std::endl;
+    else
+        std::cout << "not exist" << std::endl;
 }
 
 #endif

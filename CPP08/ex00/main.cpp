@@ -1,37 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/24 14:29:08 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/12/24 15:41:52 by tmiftah          ###   ########.fr       */
+/*   Created: 2023/12/30 08:35:56 by tmiftah           #+#    #+#             */
+/*   Updated: 2023/12/31 15:23:28 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-#define WHATEVER_HPP
+#include "easyfind.hpp"
 
-#include <iostream>
-#include <string>
-
-template<typename T>
-void swap(T& a, T& b) {
-    T tmp;
-    tmp = a;
-    a = b;
-    b = tmp;
+int main() {
+    std::vector<int> b;
+    for (size_t i = 0; i < 100; i++)
+        b.push_back(i);
+    easyfind(b, -160);
+    easyfind(b, 99);
 }
-
-template<typename T>
-const T& max(const T& va1, const T& va2) {
-    return ((va1 <= va2) ? va2 : va1);
-}
-
-template<typename T>
-const T& min(const T& va1, const T& va2) {
-    return ((va1 >= va2) ? va2 : va1);
-}
-
-#endif
